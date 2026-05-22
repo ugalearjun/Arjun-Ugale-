@@ -1,0 +1,208 @@
+<html>
+
+<head>
+<title>C Programming Tutorial</title>
+
+<script>
+function validateForm(form) 
+{
+  // Name validation
+  if(form.name.value == "") 
+  {
+    alert("Error: Name cannot be empty!");
+    form.name.focus();
+    return false;
+  }
+
+  // Email validation
+  var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+  if(form.email.value == "") 
+  {
+    alert("Error: Email cannot be empty!");
+    form.email.focus();
+    return false;
+  }
+  else if(!emailPattern.test(form.email.value))
+  {
+    alert("Error: Enter a valid email address!");
+    form.email.focus();
+    return false;
+  }
+
+  // Feedback validation
+  if(form.feedback.value == "") 
+  {
+    alert("Error: Feedback cannot be empty!");
+    form.feedback.focus();
+    return false;
+  }
+
+  alert("Feedback submitted successfully!");
+  return true;
+}
+</script>
+
+</head>
+
+<body bgcolor="lightyellow">
+
+<center>
+<h1><font color="darkblue">C Programming Tutorial</font></h1>
+<p>Learn the basics of C Programming</p>
+</center>
+
+<hr>
+
+<h2><font color="green">Introduction to C</font></h2>
+<p>
+C is a powerful programming language developed by Dennis Ritchie.
+It is widely used for system programming and application development.
+C is known for its speed, efficiency, and flexibility.
+</p>
+
+<h2><font color="green">Features of C</font></h2>
+
+<ul>
+<li>Simple and efficient</li>
+<li>Structured programming language</li>
+<li>Portable</li>
+<li>Supports low level programming</li>
+</ul>
+
+<h2><font color="green">Basic Structure of C Program</font></h2>
+
+<table border="2" cellpadding="10">
+
+<tr bgcolor="lightblue">
+<th>Part</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td>Header Files</td>
+<td>Used to include libraries like stdio.h</td>
+</tr>
+
+<tr>
+<td>Main Function</td>
+<td>Execution of program starts from main()</td>
+</tr>
+
+<tr>
+<td>Statements</td>
+<td>Instructions written inside main()</td>
+</tr>
+
+</table>
+
+<br>
+
+<h2><font color="green">Example Program</font></h2>
+
+<table border="1" bgcolor="white" cellpadding="10">
+
+<tr>
+<td>
+<pre>
+#include &lt;stdio.h&gt;
+
+void main()
+{
+    printf("Hello World");
+}
+</pre>
+</td>
+</tr>
+
+</table>
+
+<br><br>
+
+<center>
+<table border="1" cellpadding="10">
+
+<tr>
+<td><button>Learn Basics</button></td>
+<td><button>View Examples</button></td>
+<td><button>Practice Programs</button></td>
+</tr>
+
+</table>
+</center>
+
+<br>
+
+<!-- Contact Us Section -->
+
+<h2><font color="green">Contact Us</font></h2>
+
+<center>
+<table border="1" cellpadding="10" bgcolor="white">
+
+<tr>
+<td>
+
+<form>
+
+<label><b>Name:</b></label><br><br>
+<input type="text" name="cname" size="40"><br><br>
+
+<label><b>Email:</b></label><br><br>
+<input type="email" name="cemail" size="40"><br><br>
+
+<label><b>Message:</b></label><br><br>
+<textarea name="message" rows="5" cols="40"></textarea><br><br>
+
+<input type="submit" value="Send Message">
+
+</form>
+
+</td>
+</tr>
+
+</table>
+</center>
+
+<br><br>
+
+<!-- Feedback Form Section -->
+
+<h2><font color="green">Feedback Form</font></h2>
+
+<center>
+<table border="1" cellpadding="10" bgcolor="white">
+
+<tr>
+<td>
+
+<form onsubmit="return validateForm(this)">
+
+<label><b>Name:</b></label><br><br>
+<input type="text" name="name" size="40"><br><br>
+
+<label><b>Email:</b></label><br><br>
+<input type="text" name="email" size="40"><br><br>
+
+<label><b>Feedback:</b></label><br><br>
+<textarea name="feedback" rows="5" cols="40"></textarea><br><br>
+
+<input type="submit" value="Submit Feedback">
+<input type="reset" value="Reset">
+
+</form>
+
+</td>
+</tr>
+
+</table>
+</center>
+
+<br>
+
+<center>
+<p><font color="red">Practice daily to master C Programming!</font></p>
+</center>
+
+</body>
+</html>
